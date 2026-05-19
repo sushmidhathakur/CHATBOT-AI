@@ -13,7 +13,6 @@
 
 ---
 
-## ✨ Features (Hackathon Winning Capabilities)
 
 *   **🧠 Advanced NLP Pipeline**: Incorporates tokenization, lemmatization, stop-word removal, and dynamic spell correction using `TextBlob`.
 *   **⚡ Semantic Matching (TF-IDF + Cosine Similarity)**: Converts queries to vectors to understand the true intent behind the words, rather than just exact keyword matching.

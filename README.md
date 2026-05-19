@@ -86,40 +86,7 @@ To verify the robust edge-case handling:
 
 ---
 
-## 🎓 Career Showcase (For Portfolios & Interviews)
 
-### 💼 Resume Bullet Points
-*   Architected and deployed an enterprise-grade FAQ Chatbot using Python, Streamlit, and Scikit-Learn, resulting in a highly scalable and interactive user interface.
-*   Engineered a robust NLP pipeline (NLTK, TextBlob) incorporating lemmatization, stop-word removal, and dynamic spell correction, improving query intent recognition by 40%.
-*   Implemented a hybrid matching engine combining TF-IDF vectorization with Cosine Similarity and a Levenshtein-distance fuzzy fallback, ensuring 95%+ accuracy on edge-case user inputs.
-*   Containerized the application using Docker, optimizing the image size and ensuring seamless CI/CD deployment across cloud environments.
-
-### 🌐 LinkedIn Project Description
-🚀 Just deployed my latest AI project: An Enterprise-Grade FAQ Chatbot! 🤖
-
-I built this completely from scratch using Python, focusing on robust Natural Language Processing and a premium user experience. Instead of basic `if/else` keyword matching, this bot truly understands user intent.
-
-**Tech Stack:** Python, Streamlit, Scikit-Learn, NLTK, Docker.
-**Key Features:**
-🔹 TF-IDF & Cosine Similarity for semantic mathematical matching.
-🔹 Hybrid fallback system using fuzzy string matching.
-🔹 Automated spelling correction and gibberish detection.
-🔹 Beautiful, dark-mode glassmorphism UI built entirely with custom CSS.
-
-Check out the GitHub repo here: [Link] #AI #MachineLearning #Python #Streamlit #NLP #SoftwareEngineering
-
-### 🎤 Viva / Interview Questions & Answers
-
-**Q1: Why did you use TF-IDF instead of advanced embeddings like BERT?**
-*A:* TF-IDF is computationally lightweight, requires zero specialized hardware (GPUs), and is incredibly fast for limited domain FAQ matching. For a standard FAQ dataset, the complexity and latency overhead of a transformer model isn't justified. However, I built the architecture to be modular, so the `MatchingEngine` class can easily be swapped to use `SentenceTransformers` in the future.
-
-**Q2: How do you handle a scenario where the user enters gibberish or a question completely outside the dataset?**
-*A:* I implemented a dual-layer defense. First, if the Cosine Similarity score is below a strict `CONFIDENCE_THRESHOLD`, the match is rejected. Second, I implemented a fallback fuzzy matcher to catch heavy typos. If both fail, a polite fallback message is returned.
-
-**Q3: Explain the preprocessing pipeline.**
-*A:* It’s crucial for vectorization. I lowercase the text, strip URLs/emails, remove special characters, and run it through `TextBlob` for spell checking. Finally, I use NLTK to tokenize, remove stop-words (which carry little semantic weight), and lemmatize (converting words like "running" to "run") to normalize the data.
-
----
 
 ## 🔮 Future Improvements
 *   **Vector Database Integration**: Replace the in-memory Pandas dataframe with **FAISS** or **ChromaDB** to support millions of FAQs.
